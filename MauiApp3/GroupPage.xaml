@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp3.GroupPage"
+             Title="GroupPage">
+
+    <StackLayout
+     Orientation="Vertical">
+
+        <Label
+            Text="GROUPS"
+            FontSize="50"
+            FontAttributes="Bold"
+            Margin="0,0,0,20"
+
+            HorizontalOptions="Center"
+            />
+
+        <StackLayout
+     Orientation="Vertical">
+
+            <Frame
+         Margin="20"
+           VerticalOptions="FillAndExpand"
+           HorizontalOptions="FillAndExpand"
+           BackgroundColor="Black"
+           CornerRadius="20"
+           WidthRequest="360"
+           HeightRequest="450"
+           >
+
+
+                <CollectionView
+                    SelectionMode="Single"
+                    SelectionChanged="InformGroup_SelectionChanged"
+                    ItemsSource="{Binding group}">
+
+                    <CollectionView.ItemTemplate>
+
+                        <DataTemplate>
+
+                            <Frame
+                               Margin="10">
+
+                                <StackLayout Orientation="Horizontal">
+
+
+
+                                    <Label 
+                                     Text="{Binding Name}"
+                                     HorizontalOptions="FillAndExpand"
+                                        Margin="20,0,0,0"
+                                     FontAttributes="Bold"
+                                        FontSize="20"
+                                    />
+
+                                    <Label 
+                                     Text="{Binding Discription}"
+                                     
+                                    HorizontalOptions="FillAndExpand"
+                                    
+                             
+                                     />
+
+
+
+
+                                </StackLayout>
+
+                            </Frame>
+
+                        </DataTemplate>
+
+                    </CollectionView.ItemTemplate>
+
+                </CollectionView>
+
+            </Frame>
+
+        </StackLayout>
+
+
+
+        <Button
+       Text="Add"
+       BackgroundColor="#D9D9D9"
+       TextColor="#000000"
+       FontSize="30"
+       FontAttributes="Bold"
+       CornerRadius="10"
+       WidthRequest="120"
+       HeightRequest="70"
+       Margin="0, 30, 0, 20"
+       Clicked="Addgrp_Clicked"
+       />
+    </StackLayout>
+
+</ContentPage>

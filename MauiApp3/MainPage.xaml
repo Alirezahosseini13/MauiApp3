@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp3.MainPage">
+
+    <ScrollView>
+    <StackLayout
+        Orientation="Vertical">
+        <Label
+            Text="Task Manager"
+            HorizontalOptions="CenterAndExpand"
+            FontSize="35"
+            Margin="0, 10, 0, 20"
+            FontAttributes="Bold"/>
+        <Image
+            Margin="0, 19, 0, 68"
+            Source="Resources/Images/prof.jpg"
+            WidthRequest="187"
+            HeightRequest="187"
+            />
+        <Frame
+            CornerRadius="35"
+            WidthRequest="318"
+            HeightRequest="72">
+            <Entry
+                x:Name="userNameEntry"
+                Placeholder="User Name"
+                HorizontalTextAlignment="Center"
+                FontSize="24"
+                HeightRequest="50"
+                WidthRequest="260"
+                HorizontalOptions="CenterAndExpand"/>
+        </Frame>
+        <Frame
+            Margin="0, 27, 0, 105"
+            CornerRadius="35"
+            WidthRequest="318"
+            HeightRequest="72">
+            <Entry
+                x:Name="passwordEntry"
+                Placeholder="Password"
+                HorizontalTextAlignment="Center"
+                IsPassword="True"
+                FontSize="24"
+                HeightRequest="50"
+                WidthRequest="260"
+                HorizontalOptions="CenterAndExpand"/>
+        </Frame>
+
+        <Button
+            BackgroundColor="Black"
+            WidthRequest="50"
+            Margin="0, 10, 30, 0"
+            HorizontalOptions="End"
+            Text="O"
+            FontSize="20"
+            Clicked="PasswordShow"/>
+
+        <Button
+            BackgroundColor="#FFFFFF"
+            CornerRadius="35"
+            WidthRequest="318"
+            HeightRequest="58"
+            Text="Login"
+            TextColor="Black"
+            FontSize="26"
+            FontAttributes="Bold"
+            Clicked="loginButton"/>
+        <Button
+            Margin="0, 21, 0, 0"
+            Text="Forgot Password"
+            BackgroundColor="#6C6C6C"
+            WidthRequest="137"
+            Clicked="forgotPasswordButton"/>
+    </StackLayout>
+    </ScrollView>
+
+</ContentPage>
