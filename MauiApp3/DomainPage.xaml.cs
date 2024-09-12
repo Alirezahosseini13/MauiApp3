@@ -1,3 +1,4 @@
+using CommunityToolkit.Maui.Views;
 using System.Collections.ObjectModel;
 namespace MauiApp3;
 public partial class DomainPage : ContentPage
@@ -30,8 +31,6 @@ public partial class DomainPage : ContentPage
     async private void AddDomain_Clicked(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new AddDominPage());
-
-
     }
 
     private void ShowSubDomain_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -41,11 +40,11 @@ public partial class DomainPage : ContentPage
 
     async private void Addtsk_Clicked(object sender, EventArgs e)
     {
-        
+     this.ShowPopupAsync(new PopUpTaskList());  
     }
 
     async private void ShowTskGroup_SelectionChanged(object sender, SelectionChangedEventArgs e)
     {
-
+     this.ShowPopupAsync(new PopUpTask1());
     }
 }

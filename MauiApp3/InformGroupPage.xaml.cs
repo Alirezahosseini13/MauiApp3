@@ -31,22 +31,22 @@ public partial class InformGroupPage : ContentPage
 
     async private void Showprofile_Tapped(object sender, TappedEventArgs e)
     {
-        await Navigation.PushAsync(new ShowprofilePage());
+     await Navigation.PushAsync(new ShowprofilePage());
     }
 
     private void Showmore_Tapped(object sender, TappedEventArgs e)
     {
-        this.ShowPopupAsync(new PopUp());
+     this.ShowPopupAsync(new PopUp());
     }
 
     async private void Adduse_Clicked(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new AdduPage());
+     this.ShowPopupAsync(new PopUpMembersLIST());
     }
 
     async private void Addtsk_Clicked(object sender, EventArgs e)
     {
-        
+     this.ShowPopupAsync(new PopUpTaskList());
     }
 
     private void ShowTskGroup_SelectionChanged(object sender, SelectionChangedEventArgs e)
