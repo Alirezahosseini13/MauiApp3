@@ -8,6 +8,7 @@ namespace MauiApp3
 {
    public class Domains
     {
+        // Hello from hell
         public string NameDomain { set; get; }
 
         public Domains(string NameDomain)
