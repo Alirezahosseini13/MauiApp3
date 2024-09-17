@@ -4,78 +4,75 @@
              x:Class="MauiApp3.AdduPage"
              Title="AdduPage">
     <StackLayout
-        Orientation="Vertical" >
+     Orientation="Vertical" >
         <Button
-        ImageSource="Resources/Images/user1.jpg"
-       
+         ImageSource="Resources/Images/user.png"
          WidthRequest="120"
          Padding="0,0,0,0"
-            Margin="0,0,0,20"
-         Clicked="Prof_Clicked"/>
-
-
-        <Frame
-    CornerRadius="35"
-    WidthRequest="318"
-    HeightRequest="70">
-            <Entry
-        Placeholder="User Name"
-        HorizontalTextAlignment="Start"
-        FontSize="17"
-        HeightRequest="50"
-        WidthRequest="260"
-        HorizontalOptions="CenterAndExpand"/>
-        </Frame>
-        
-        <Frame
-    Margin="0, 20, 0, 20"
-    CornerRadius="35"
-    WidthRequest="318"
-    HeightRequest="70">
-            <Entry
-        Placeholder="Password"
-        HorizontalTextAlignment="Start"
-        IsPassword="True"
-        FontSize="17"
-        HeightRequest="50"
-        WidthRequest="260"
-        HorizontalOptions="CenterAndExpand"/>
-        </Frame>
-
-        <Frame
-       
-         CornerRadius="35"
-         WidthRequest="318"
-         HeightRequest="72">
-            <Entry
-        HorizontalTextAlignment="Start"
-        Keyboard="Numeric"
-        FontSize="17"
-        MaxLength="11"
-         HeightRequest="50"
-         WidthRequest="260"
-        Placeholder="09123456789"
-        
+         Margin="0,0,0,20"
+         Clicked="Prof_Clicked"
         />
 
+
+        <Frame
+         CornerRadius="35"
+         WidthRequest="318"
+         HeightRequest="70">
+            <Entry x:Name="usernameEntry"
+             Placeholder="User Name"
+             HorizontalTextAlignment="Start"
+             FontSize="17"
+             HeightRequest="50"
+             WidthRequest="260"
+             HorizontalOptions="CenterAndExpand"
+            />
+       </Frame>
+        
+        <Frame
+         Margin="0, 20, 0, 20"
+         CornerRadius="35"
+         WidthRequest="318"
+         HeightRequest="70">
+            <Entry x:Name="userpaswordEntry"
+             Placeholder="Password"
+             HorizontalTextAlignment="Start"
+             IsPassword="True"
+             FontSize="17"
+             HeightRequest="50"
+             WidthRequest="260"
+             HorizontalOptions="CenterAndExpand"
+            />
+        </Frame>
+
+         <Frame
+       
+          CornerRadius="35"
+          WidthRequest="318"
+          HeightRequest="72">
+           <Entry x:Name="usernumberEntry"
+            HorizontalTextAlignment="Start"
+            Keyboard="Numeric"
+            FontSize="17"
+            MaxLength="11"
+            HeightRequest="50"
+            WidthRequest="260"
+            Placeholder="09123456789"
+           />
+
         </Frame>
 
 
         <Frame
-             Margin="0, 20, 0, 20"
-             CornerRadius="35"
-             WidthRequest="318"
-             HeightRequest="72">
-            <Entry
-              HorizontalTextAlignment="Start"
-              FontSize="17"
+            Margin="0, 20, 0, 20"
+            CornerRadius="35"
+            WidthRequest="318"
+            HeightRequest="72">
+            <Picker x:Name="pickerjob"
+             Title="Select a job position"
              HeightRequest="50"
-              WidthRequest="260"
-             Placeholder="job position"
-
-             />
+             WidthRequest="260">
+            </Picker>
         </Frame>
-
 
         <Button
          Text="which group"
@@ -86,8 +83,7 @@
          WidthRequest="318"
          HeightRequest="72"
             Clicked="Whichg_Clicked"
- 
-         />
+        />
 
 
         <Button
@@ -102,7 +98,7 @@
          Margin="0, 30, 0, 20"
          Clicked="Addus_Clicked"
     
-      />
+        />
 
 
 

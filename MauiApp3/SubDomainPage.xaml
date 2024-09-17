@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp3.SubDomainPage"
+             Title="SubDomainPage">
+
+    <ScrollView>
+        <StackLayout>
+
+            <Label
+             Text="SUB DOMAIN"
+             FontSize="20"
+             FontAttributes="Bold"
+             Margin="0,10,0,30"
+             HorizontalOptions="Center"
+            />
+            <StackLayout
+                Orientation="Vertical">
+
+                <Frame
+                    Margin="20"
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    BackgroundColor="Black"
+                    CornerRadius="20"
+                    WidthRequest="300"
+                    HeightRequest="200">
+
+                    <CollectionView
+	                   SelectionMode="Single"
+                       ItemsSource="{Binding domains}">
+
+                        <CollectionView.ItemTemplate>
+
+                            <DataTemplate>
+
+                                <Frame
+                                   Margin="10">
+
+                                    <StackLayout Orientation="Horizontal">
+
+                                        <Label 
+                                          Text="{Binding NameDomain}"
+                                          HorizontalOptions="FillAndExpand"
+                                          Margin="20,0,0,0"
+                                          FontAttributes="Bold"
+                                          FontSize="20"
+                                         />
+
+                                    </StackLayout>
+
+                                </Frame>
+
+                            </DataTemplate>
+
+                        </CollectionView.ItemTemplate>
+
+                    </CollectionView>
+
+                </Frame>
+            </StackLayout>
+            <Button
+                 Text="Add"
+                 BackgroundColor="#D9D9D9"
+                 TextColor="#000000"
+                 FontSize="30"
+                 CornerRadius="10"
+                 WidthRequest="120"
+                 HeightRequest="70"
+                 Margin="0, 30, 0, 20"
+                 Clicked="AddDomain_Clicked"
+                />
+
+
+            <StackLayout
+                     Orientation="Vertical">
+
+                <Frame
+                         Margin="20"
+                         VerticalOptions="FillAndExpand"
+                         HorizontalOptions="FillAndExpand"
+                         BackgroundColor="Black"
+                         CornerRadius="20"
+                         WidthRequest="300"
+                         HeightRequest="200">
+
+                    <CollectionView
+                     SelectionMode="Single"
+                        SelectionChanged="InformGroup_SelectionChanged"
+                     ItemsSource="{Binding group}">
+                        <CollectionView.ItemTemplate>
+
+                            <DataTemplate>
+
+                                <Frame
+                                 Margin="10">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label 
+                                         Text="{Binding Name}"
+                                         HorizontalOptions="FillAndExpand"
+                                         Margin="20,0,0,0"
+                                         FontAttributes="Bold"
+                                         FontSize="20"
+                                        />
+
+                                        <Label 
+                                         Text="{Binding Discription}"                           
+                                         HorizontalOptions="FillAndExpand"
+                                        />
+
+
+
+
+                                    </StackLayout>
+
+                                </Frame>
+
+                            </DataTemplate>
+
+                        </CollectionView.ItemTemplate>
+
+                    </CollectionView>
+
+                </Frame>
+
+            </StackLayout>
+            <Button
+              Text="Add"
+              BackgroundColor="#D9D9D9"
+              TextColor="#000000"
+              FontSize="30"
+              FontAttributes="Bold"
+              CornerRadius="10"
+              WidthRequest="120"
+              HeightRequest="70"
+              Margin="0, 30, 0, 20"
+              Clicked="Addgrp_Clicked"
+             />
+
+
+            <Label
+             Text="TASK"
+             FontSize="20"
+             FontAttributes="Bold"
+             Margin="0,10,0,30"
+             HorizontalOptions="Center"
+            />
+
+
+            <StackLayout
+             Orientation="Vertical">
+
+                <Frame
+                 Margin="20"
+                 VerticalOptions="FillAndExpand"
+                 HorizontalOptions="FillAndExpand"
+                 BackgroundColor="Black"
+                 CornerRadius="20"
+                 WidthRequest="300"
+                 HeightRequest="200">
+
+
+                    <CollectionView
+	                 SelectionMode="Single"
+                     SelectionChanged="ShowTskGroup_SelectionChanged"
+                     ItemsSource="{Binding tasks}">
+
+                        <CollectionView.ItemTemplate>
+
+                            <DataTemplate>
+
+                                <Frame
+                                 Margin="10">
+
+                                    <StackLayout Orientation="Horizontal">
+
+
+
+                                        <Label 
+                             Text="{Binding Nametask}"
+                             HorizontalOptions="FillAndExpand"
+                             Margin="20,0,0,0"
+                             FontAttributes="Bold"
+                             FontSize="20"
+                             />
+
+                                    </StackLayout>
+
+                                </Frame>
+
+                            </DataTemplate>
+
+                        </CollectionView.ItemTemplate>
+
+                    </CollectionView>
+                </Frame>
+
+            </StackLayout>
+
+
+
+            <Button
+             Text="Add"
+             BackgroundColor="#D9D9D9"
+             TextColor="#000000"
+             FontSize="30"
+     
+             CornerRadius="10"
+             WidthRequest="120"
+             HeightRequest="70"
+             Margin="0, 30, 0, 20"
+             Clicked="Addtsk_Clicked"
+            />
+
+
+
+
+
+
+
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

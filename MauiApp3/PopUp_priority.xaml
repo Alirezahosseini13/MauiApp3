@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="MauiApp3.PopUp_priority"
+            >
+    <VerticalStackLayout>
+        <StackLayout Padding="20" VerticalOptions="Center"
+                    
+                     >
+            <Label Text="Priority"
+             FontSize="25"
+             FontAttributes="Bold"
+             HorizontalOptions="Center" />
+
+            <Frame Margin="0,20,0 , 10"
+                   HeightRequest="60"
+                WidthRequest="270"
+                    >
+                <Slider x:Name="ImportanceSlider"
+             Minimum="0"
+             Maximum="100"
+             ValueChanged="OnSliderValueChanged" />
+            </Frame>
+
+            <Label x:Name="ImportanceLabel"
+             FontSize="18"
+             HorizontalOptions="Center" />
+
+            <Button Text="save"
+             Margin="0,30,0,10"
+         Clicked="OnSaveButtonClicked"
+         HorizontalOptions="Center" />
+
+            <Label x:Name="ConfirmationLabel"
+                   Margin="0,0,0,10"
+        FontSize="13"
+        HorizontalOptions="Center"
+        IsVisible="False" />
+        </StackLayout>
+    </VerticalStackLayout>
+</toolkit:Popup>

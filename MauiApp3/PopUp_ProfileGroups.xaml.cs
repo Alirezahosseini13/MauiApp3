@@ -1,11 +1,12 @@
 using CommunityToolkit.Maui.Views;
 using System.Collections.ObjectModel;
+
 namespace MauiApp3;
 
-public partial class PopUpGroups : Popup
+public partial class PopUp_ProfileGroups : Popup
 {
     public ObservableCollection<Groups> group { get; set; }
-    public PopUpGroups()
+    public PopUp_ProfileGroups()
     {
         InitializeComponent();
         group = new ObservableCollection<Groups>();
@@ -16,10 +17,5 @@ public partial class PopUpGroups : Popup
         }
 
         BindingContext = this;
-    }
-
-    async private void Addgrp_Clicked(object sender, EventArgs e)
-    {
-
     }
 }

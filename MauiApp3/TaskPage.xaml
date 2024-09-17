@@ -32,7 +32,7 @@
 
                 <CollectionView
 	             SelectionMode="Single"
-                 SelectionChanged="ShowTskGroup_SelectionChanged"
+                 SelectionChanged="ShowTaskInformation_SelectionChanged"
                  ItemsSource="{Binding tasks}">
 
                     <CollectionView.ItemTemplate>

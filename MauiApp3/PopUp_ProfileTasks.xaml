@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="MauiApp3.PopUp_ProfileTasks">
+ <ScrollView>
+  <StackLayout>
+            <Frame
+             Margin="0,10,0,0"
+             WidthRequest="250"
+             CornerRadius="20">
+              <Label
+               Text="All Tasks"
+               FontSize="25"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+              />
+            </Frame>
+    <StackLayout
+     Orientation="Vertical">
+        <StackLayout
+         Orientation="Vertical">
+            <Frame
+             Margin="10"
+             VerticalOptions="FillAndExpand"
+             HorizontalOptions="FillAndExpand"
+             BackgroundColor="Black"
+             CornerRadius="20"
+             WidthRequest="360"
+             HeightRequest="300">
+                <CollectionView
+                 SelectionMode="Multiple"
+                 ItemsSource="{Binding tasks}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame
+                             Margin="10">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label 
+                                     Text="{Binding Nametask}"
+                                     HorizontalOptions="FillAndExpand"
+                                     Margin="20,0,0,0"
+                                     FontAttributes="Bold"
+                                     FontSize="20"
+                                     />
+                                </StackLayout>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </Frame>
+        </StackLayout>
+     </StackLayout>
+              <Frame
+               Margin="0,40,0,0"
+               WidthRequest="250"
+               CornerRadius="20">
+                <Label
+                 Text="Tasks Completed"
+                 FontSize="25"
+                 FontAttributes="Bold"
+                 HorizontalOptions="Center"
+                />
+              </Frame>
+       <StackLayout
+        Orientation="Vertical">
+            <StackLayout
+             Orientation="Vertical">
+                <Frame
+                 Margin="10"
+                 VerticalOptions="FillAndExpand"
+                 HorizontalOptions="FillAndExpand"
+                 BackgroundColor="Black"
+                 CornerRadius="20"
+                 WidthRequest="360"
+                 HeightRequest="300">
+                    <CollectionView
+                     SelectionMode="Multiple"
+                     ItemsSource="{Binding tasks1}">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Frame
+                                 Margin="10">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label 
+                                         Text="{Binding Nametask}"
+                                         HorizontalOptions="FillAndExpand"
+                                         Margin="20,0,0,0"
+                                         FontAttributes="Bold"
+                                         FontSize="20"
+                                        />
+                                    </StackLayout>
+                                </Frame>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </Frame>
+            </StackLayout>
+      </StackLayout>
+                    <Frame
+                     Margin="0,40,0,0"
+                     WidthRequest="250"
+                     CornerRadius="20">
+                     <Label
+                      Text="Uncompleted Tasks"
+                      FontSize="25"
+                      FontAttributes="Bold"
+                      HorizontalOptions="Center"
+                     />
+                    </Frame>
+     <StackLayout
+      Orientation="Vertical">
+        <StackLayout
+            Orientation="Vertical">
+              <Frame
+               Margin="10"
+               VerticalOptions="FillAndExpand"
+               HorizontalOptions="FillAndExpand"
+               BackgroundColor="Black"
+               CornerRadius="20"
+               WidthRequest="360"
+               HeightRequest="300">
+                 <CollectionView
+                  SelectionMode="Multiple"
+                  ItemsSource="{Binding tasks1}">
+                    <CollectionView.ItemTemplate>
+                       <DataTemplate>
+                          <Frame
+                           Margin="10">
+                             <StackLayout Orientation="Horizontal">
+                                <Label 
+                                 Text="{Binding Nametask}"
+                                 HorizontalOptions="FillAndExpand"
+                                 Margin="20,0,0,0"
+                                 FontAttributes="Bold"
+                                 FontSize="20"
+                                />
+                             </StackLayout>
+                          </Frame>
+                       </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                 </CollectionView>
+              </Frame>
+            </StackLayout>
+        </StackLayout>
+  </StackLayout>
+ </ScrollView>
+</toolkit:Popup>

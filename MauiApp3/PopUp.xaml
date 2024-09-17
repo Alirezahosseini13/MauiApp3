@@ -3,21 +3,101 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              x:Class="MauiApp3.PopUp">
-    <VerticalStackLayout>
+    <ScrollView>
+      <StackLayout>
         <Frame
-            BackgroundColor="Blue"
-            >
+         Margin="0,10,0,0"
+         WidthRequest="250"
+         CornerRadius="20">
+            <Label
+           Text="All Tasks"
+           FontSize="25"
+           FontAttributes="Bold"
+           HorizontalOptions="Center"
+           />
+        </Frame>
+        <StackLayout
+         Orientation="Vertical">
             <StackLayout
              Orientation="Vertical">
-                <Label
-                 Text="IM a POP UP"
-               />
-                <Button
-                Text="Click me"
-               />
+                <Frame
+                 Margin="10"
+                 VerticalOptions="FillAndExpand"
+                 HorizontalOptions="FillAndExpand"
+                 BackgroundColor="Black"
+                 CornerRadius="20"
+                 WidthRequest="360"
+                 HeightRequest="300">
+                    <CollectionView
+                     SelectionMode="Multiple"
+                     ItemsSource="{Binding tasks3}">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Frame
+                                 Margin="10">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label 
+                                         Text="{Binding Nametask}"
+                                         HorizontalOptions="FillAndExpand"
+                                         Margin="20,0,0,0"
+                                         FontAttributes="Bold"
+                                         FontSize="20"
+                                        />
+                                    </StackLayout>
+                                </Frame>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </Frame>
             </StackLayout>
-
-
+        </StackLayout>
+ 
+        <Frame
+         Margin="0,25,0,0"
+         WidthRequest="250"
+         CornerRadius="20">
+            <Label
+           Text="Tasks Completed"
+           FontSize="25"
+           FontAttributes="Bold"
+           HorizontalOptions="Center"
+           />
         </Frame>
-    </VerticalStackLayout>
+        <StackLayout
+         Orientation="Vertical">
+            <StackLayout
+             Orientation="Vertical">
+                <Frame
+                 Margin="10"
+                 VerticalOptions="FillAndExpand"
+                 HorizontalOptions="FillAndExpand"
+                 BackgroundColor="Black"
+                 CornerRadius="20"
+                 WidthRequest="360"
+                 HeightRequest="300">
+                    <CollectionView
+                     SelectionMode="Multiple"
+                     ItemsSource="{Binding tasks4}">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Frame
+                                 Margin="10">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label 
+                                         Text="{Binding Nametask}"
+                                         HorizontalOptions="FillAndExpand"
+                                         Margin="20,0,0,0"
+                                         FontAttributes="Bold"
+                                         FontSize="20"
+                                        />
+                                    </StackLayout>
+                                </Frame>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </Frame>
+            </StackLayout>
+        </StackLayout>
+       </StackLayout>
+    </ScrollView>
 </toolkit:Popup>

@@ -7,7 +7,14 @@ public partial class AdduPage : ContentPage
 	public AdduPage()
 	{
 		InitializeComponent();
-	}
+
+        var jobList = new List<String>();
+        jobList.Add("Programmer");
+        jobList.Add("NetWork Expert");
+        jobList.Add("CEO");
+
+        pickerjob.ItemsSource = jobList;
+    }
 
     async private void Prof_Clicked(object sender, EventArgs e)
     {
@@ -22,7 +29,24 @@ public partial class AdduPage : ContentPage
 
     async private void Addus_Clicked(object sender, EventArgs e)
     {
-        await DisplayAlert("SUCCESS", "ADDED SUCCESSFULLY", "OK");
+        if (!string.IsNullOrWhiteSpace(usernameEntry.Text) && !string.IsNullOrWhiteSpace(userpaswordEntry.Text) && !string.IsNullOrWhiteSpace(usernumberEntry.Text) && pickerjob.SelectedItem != null)
+        {
+            bool add = await DisplayAlert("confirmation", " are you sure to add it ? ", "OK", "NO");
+            if (add)
+            {
+                await DisplayAlert("SUCCESS", "ADDED SUCCESSFULLY", "OK");
+            }
+            else
+            {
+                return;
+            }
+
+        }
+        else
+        {
+            await DisplayAlert("error", "please fill in the fields ", "OK");
+        }
+
 
     }
 }

@@ -18,9 +18,25 @@ public partial class AddDominPage : ContentPage
      this.ShowPopupAsync(new PopUpGroups());
     }
 
-    private void Add_Clicked_2(object sender, EventArgs e)
+    async private void Add_Clicked_2(object sender, EventArgs e)
     {
+        if (!string.IsNullOrWhiteSpace(nameDomEntry.Text) && !string.IsNullOrWhiteSpace(discriptionEntry.Text))
+        {
+          bool add = await DisplayAlert("confirmation", " are you sure to add it ? ", "OK", "NO");
+           if (add)
+           {
+            await DisplayAlert("SUCCESS", "ADDED SUCCESSFULLY", "OK");
+           }
+           else
+           {
+            return;
+           }
 
+        }
+           else
+           {
+            await DisplayAlert("error", "please fill in the fields ", "OK");
+           }
     }
 
     private void ADMIN_Clicked_3(object sender, EventArgs e)

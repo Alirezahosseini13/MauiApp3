@@ -33,7 +33,7 @@
 
         private void forgotPasswordButton(object sender, EventArgs e)
         {
-
+            App.Current.MainPage = new ForgotPassword();
         }
     }
 
