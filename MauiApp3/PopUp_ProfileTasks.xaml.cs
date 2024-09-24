@@ -15,6 +15,16 @@ public partial class PopUp_ProfileTasks : Popup
         {
             tasks.Add(new Tasks("name task ..."));
         }
-                BindingContext = this;
+        tasks1 = new ObservableCollection<Tasks>();
+        for (int i = 0; i < 10; i++)
+        {
+            tasks1.Add(new Tasks("name task ..."));
+        }
+        tasks2 = new ObservableCollection<Tasks>();
+        for (int i = 0; i < 10; i++)
+        {
+            tasks2.Add(new Tasks("name task ..."));
+        }
+        BindingContext = this;
     }
 }

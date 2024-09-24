@@ -5,6 +5,8 @@
              x:Class="MauiApp3.PopUp_ProfileTasks">
  
   
+    <StackLayout
+     Orientation="Vertical">
         <StackLayout
          Orientation="Vertical">
             <Frame
@@ -13,7 +15,7 @@
              HorizontalOptions="FillAndExpand"
              BackgroundColor="Black"
              CornerRadius="20"
-            WidthRequest="360"
+             WidthRequest="360"
 HeightRequest="400">
                 <CollectionView
                  SelectionMode="Multiple"

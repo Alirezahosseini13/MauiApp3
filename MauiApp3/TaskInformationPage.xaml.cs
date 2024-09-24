@@ -31,6 +31,12 @@ public partial class TaskInformationPage : ContentPage
             case "Priority":
                 SetPriority();
                 break;
+            case "Start Time":
+                SetDeadline();
+                break;
+            case "End Time":
+                SetDeadline();
+                break;
             case "Sleep Time":
                 SetDeadline();
                 break;
@@ -61,7 +67,16 @@ public partial class TaskInformationPage : ContentPage
         this.ShowPopupAsync(new PopUp_deadline());
     }
 
-  
+    private void SetCreatedBy()
+    {
+        this.ShowPopupAsync(new PopUpMembersLIST());
+
+    }
+
+    private void GoToPreviousTask()
+    {
+        this.ShowPopupAsync(new PopUpTaskList());
+
       private void GoToPreviousNextTask()
     {
 

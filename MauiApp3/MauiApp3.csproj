@@ -126,6 +126,12 @@
 	  <MauiXaml Update="PopUp_FileUploadPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="ForgotPassword.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="PopUp_FileUploadPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="GroupPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

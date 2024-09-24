@@ -34,7 +34,16 @@
                 BackgroundColor="Black" 
                 TextColor="#999DAD" 
                 CornerRadius="35" />
-           
+
+            <Frame CornerRadius="35" WidthRequest="318" HeightRequest="72" Margin="0,10,0,20">
+                <Entry 
+                x:Name="disTaskEntry" 
+                 Placeholder="Discription"
+                 HeightRequest="40"
+                 HorizontalTextAlignment="Center" 
+                 FontSize="18" 
+                    HorizontalOptions="CenterAndExpand" />
+            </Frame>        
 
             <Button 
              Text="Assign To " 
@@ -90,8 +99,18 @@
              TextColor="#999DAD" 
              CornerRadius="35"/>
  
-          
-             <Button 
+            <Button 
+             Text="Next Task" 
+             FontSize="20" 
+             WidthRequest="330" 
+             HeightRequest="60" 
+             Margin="0,10,0,20" 
+             Clicked="Button_Clicked" 
+             BackgroundColor="Black" 
+             TextColor="#999DAD" 
+             CornerRadius="35"/>
+
+            <Button 
              Text="Manager" 
              FontSize="20" 
              WidthRequest="330" 
@@ -124,7 +143,27 @@
              TextColor="#999DAD"
              CornerRadius="35"/>
             
-           
+            <Button 
+             Text="Start Time" 
+             FontSize="20" 
+             WidthRequest="330" 
+             HeightRequest="60" 
+             Margin="0,10,0,20" 
+             Clicked="Button_Clicked" 
+             BackgroundColor="Black" 
+             TextColor="#999DAD" 
+             CornerRadius="35"/>
+            
+            <Button 
+             Text="End Time" 
+             FontSize="20" 
+             WidthRequest="330" 
+             HeightRequest="60" 
+             Margin="0,10,0,20" 
+             Clicked="Button_Clicked" 
+             BackgroundColor="Black" 
+             TextColor="#999DAD" 
+             CornerRadius="35"/>
             
             <Button 
              Text="Sleep Time" 

@@ -37,12 +37,12 @@
 
 
                                     <Label 
-                                       Text="{Binding Name}"
-                                    HorizontalOptions="FillAndExpand"
-                                    Margin="20,0,0,0"
-                                    FontAttributes="Bold"
-                                    FontSize="20"
-                                       />
+                               Text="{Binding Name}"
+                            HorizontalOptions="FillAndExpand"
+                            Margin="20,0,0,0"
+                            FontAttributes="Bold"
+                            FontSize="20"
+                               />
 
 
                                 </StackLayout>
