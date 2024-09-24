@@ -33,18 +33,18 @@ public partial class DomainPage : ContentPage
         await Navigation.PushAsync(new AddDominPage());
     }
 
-    private void ShowSubDomain_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    async private void ShowSubDomain_SelectionChanged(object sender, SelectionChangedEventArgs e)
     {
-
+        await Navigation.PushAsync(new SubDomainPage());
     }
 
-    async private void Addtsk_Clicked(object sender, EventArgs e)
+     private void Addtsk_Clicked(object sender, EventArgs e)
     {
      this.ShowPopupAsync(new PopUpTaskList());  
     }
 
-    async private void ShowTskGroup_SelectionChanged(object sender, SelectionChangedEventArgs e)
+     async private void ShowTskGroup_SelectionChanged(object sender, SelectionChangedEventArgs e)
     {
-     this.ShowPopupAsync(new PopUpTask1());
+        await Navigation.PushAsync(new ShowTaskInformationPage());
     }
 }

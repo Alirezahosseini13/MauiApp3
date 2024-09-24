@@ -5,18 +5,18 @@ namespace MauiApp3;
 
 public partial class InformGroupPage : ContentPage
 {
-    public ObservableCollection<Users> users { get; set; }
+    public ObservableCollection<Users> useers { get; set; }
     public ObservableCollection<Tasks> tasks { get; set; }
 
 
     public InformGroupPage()
 	{
 		InitializeComponent();
-        users = new ObservableCollection<Users>();
+        useers = new ObservableCollection<Users>();
 
         for (int i = 0; i < 20; i++)
         {
-            users.Add(new Users("Resources/Iimages/user1", "shqayeq", "more"));
+            useers.Add(new Users("Resources/Iimages/user1", "shqayeq", "more"));
         }
 
 
@@ -44,15 +44,24 @@ public partial class InformGroupPage : ContentPage
      this.ShowPopupAsync(new PopUpMembersLIST());
     }
 
-    async private void Addtsk_Clicked(object sender, EventArgs e)
+     private void Addtsk_Clicked(object sender, EventArgs e)
     {
      this.ShowPopupAsync(new PopUpTaskList());
     }
 
-    private void ShowTskGroup_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    async private void ShowTskGroup_SelectionChanged(object sender, SelectionChangedEventArgs e)
     {
 
-     this.ShowPopupAsync(new PopUpTask1());
+        await Navigation.PushAsync(new ShowTaskInformationPage());
+    }
+    private void OnDeleteItem(object sender, EventArgs e)
+    {
+        
+        var swipeItem = (SwipeItem)sender;
+        var users = (Users)swipeItem.BindingContext;
+
+       
+        useers.Remove(users);
     }
 
 }

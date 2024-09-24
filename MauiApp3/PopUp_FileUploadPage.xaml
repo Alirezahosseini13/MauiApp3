@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup  xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="MauiApp3.PopUp_FileUploadPage">
+    <StackLayout>
+
+        <Button Text="Select File" Clicked="OnSelectFileClicked"
+         Margin="0, 15, 0, 0"
+         CornerRadius="35"
+         WidthRequest="318"
+         HeightRequest="70"/>
+        <Button Text="Upload File" Clicked="OnUploadFileClicked" IsEnabled="False" x:Name="UploadButton"
+         Margin="0, 15, 0, 0"
+         CornerRadius="35"
+         WidthRequest="318"
+         HeightRequest="70"/>
+        <Label x:Name="StatusLabel" Text="" />
+
+
+        <VerticalStackLayout>
+           
+            <Frame
+              Margin="0, 0, 0, 0"
+              CornerRadius="35"
+              WidthRequest="318"
+              HeightRequest="70">
+
+                <Entry
+                 Placeholder="Discription"
+                 HorizontalTextAlignment="Center"
+                 FontSize="17"
+                 HeightRequest="50"
+                 WidthRequest="260"
+                />
+            </Frame>
+
+
+
+
+
+
+
+
+
+            <StackLayout
+             Orientation="Vertical">
+
+                <Frame
+                 Margin="20,15,20,0"
+                 VerticalOptions="FillAndExpand"
+                 HorizontalOptions="FillAndExpand"
+                 BackgroundColor="Black"
+                 CornerRadius="20"
+                 WidthRequest="360"
+                 HeightRequest="300">
+
+
+
+                    <CollectionView
+                     SelectionMode="Multiple"
+      
+                     ItemsSource="{Binding users}">
+
+                        <CollectionView.ItemTemplate>
+
+                            <DataTemplate>
+
+                                <Frame
+                                  Margin="8"
+                                HeightRequest="70">
+
+                                    <StackLayout Orientation="Horizontal">
+
+
+
+                                        <Image 
+                                         Source="{Binding ImageUrl}"
+                                         Aspect="Fill"
+                                         HeightRequest="20"
+                                         WidthRequest="20"
+                                         Margin="0,0,20,0" >
+                                        </Image>
+
+
+
+                                        <Label 
+                                         Text="{Binding Name}"
+                                         VerticalOptions="Center"
+                                        />  
+
+                                    </StackLayout>
+
+                                </Frame>
+
+                            </DataTemplate>
+
+                        </CollectionView.ItemTemplate>
+
+                    </CollectionView>
+
+                </Frame>
+
+            </StackLayout>
+
+
+
+
+
+
+            <Button
+             Text="Add"
+             BackgroundColor="Black" 
+             TextColor="White"
+             FontSize="25"
+             CornerRadius="10"
+             WidthRequest="120"
+             HeightRequest="50"
+             Margin="0, 15, 0, 10"
+             Clicked="Button_Clicked"
+    
+            />
+
+        </VerticalStackLayout>
+    </StackLayout>
+</toolkit:Popup>

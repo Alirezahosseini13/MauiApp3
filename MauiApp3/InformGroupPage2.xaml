@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp3.InformGroupPage2">
+    <ScrollView>
+
+        <StackLayout
+         Orientation="Vertical">
+
+
+            <StackLayout
+             Orientation="Vertical">
+
+                <Frame
+                 Margin="20"
+                 VerticalOptions="FillAndExpand"
+                 HorizontalOptions="FillAndExpand"
+                 BackgroundColor="Black"
+                 CornerRadius="20"
+                 WidthRequest="360"
+                 HeightRequest="400"
+                  >
+
+
+                    <CollectionView
+                     ItemsSource="{Binding users}">
+
+                        <CollectionView.ItemTemplate>
+
+                            <DataTemplate>
+
+                                <Frame
+                                 Margin="10">
+
+                                    <StackLayout Orientation="Horizontal">
+
+
+
+                                        <Image 
+                                         Source="{Binding ImageUrl}"
+                                         Aspect="Fill"
+                                         HeightRequest="60"
+                                         WidthRequest="60"
+                                         Margin="0,0,20,0">
+                                            <Image.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="Showprofile_Tapped"/>
+                                            </Image.GestureRecognizers>
+                                        </Image>
+
+
+
+                                        <Label 
+                                         Text="{Binding Name}"
+                                         VerticalOptions="Center"
+                                        />
+
+                                        <Label 
+                                         Text="{Binding More}"
+                                         FontAttributes="Bold"
+                                         HorizontalOptions="End"
+                                         Margin="80,40,0,0" >
+                                            <Label.GestureRecognizers>
+                                                <TapGestureRecognizer  Tapped="Showmore_Tapped"/>
+                                            </Label.GestureRecognizers>
+
+                                        </Label>
+
+
+                                    </StackLayout>
+
+                                </Frame>
+
+                            </DataTemplate>
+
+                        </CollectionView.ItemTemplate>
+
+                    </CollectionView>
+
+                </Frame>
+
+            </StackLayout>
+
+            <StackLayout
+             Orientation="Vertical">
+
+                <Frame
+                  Margin="20"
+                 VerticalOptions="FillAndExpand"
+                 HorizontalOptions="FillAndExpand"
+                 BackgroundColor="Black"
+                 CornerRadius="20"
+                 WidthRequest="360"
+                 HeightRequest="400"
+                 >
+
+
+                    <CollectionView
+                        ItemsSource="{Binding tasks}">
+
+                        <CollectionView.ItemTemplate>
+
+                            <DataTemplate>
+
+                                <Frame
+                                Margin="10">
+
+                                    <StackLayout Orientation="Horizontal">
+
+
+
+                                        <Label 
+                                       Text="{Binding Nametask}"
+                                        HorizontalOptions="FillAndExpand"
+                                        Margin="20,0,0,0"
+                                        FontAttributes="Bold"
+                                        FontSize="20"
+                                        />
+
+                                    </StackLayout>
+
+                                </Frame>
+
+                            </DataTemplate>
+
+                        </CollectionView.ItemTemplate>
+
+                    </CollectionView>
+                </Frame>
+
+            </StackLayout>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

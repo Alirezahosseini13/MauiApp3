@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+                x:Class="MauiApp3.PopUP_ShowTaskInformation"
+             >
+    <ScrollView>
+    <VerticalStackLayout Background="White">
+
+        <Label
+        Text="TASK  INFORMATION"
+        FontSize="20"
+         FontAttributes="Bold"
+         Margin="0,10,0,30"
+        HorizontalOptions="Center"
+         />
+
+        <Frame CornerRadius="35" WidthRequest="318" HeightRequest="72" Margin="0,10,0,20">
+            <Label 
+  
+     Text="NameTask"
+     HeightRequest="40"
+     HorizontalTextAlignment="Center" 
+     FontSize="18" 
+     HorizontalOptions="CenterAndExpand" />
+        </Frame>
+
+        <Frame CornerRadius="35" WidthRequest="318" HeightRequest="72" Margin="0,10,0,20">
+            <Label 
+      Text="Assign To " 
+      FontSize="20" 
+      WidthRequest="330" 
+      HeightRequest="60" 
+      HorizontalTextAlignment="Center"
+      />
+            
+        </Frame>
+
+
+        <Frame CornerRadius="35" WidthRequest="318" HeightRequest="72" Margin="0,10,0,20">
+            <Label 
+      Text="Deadline" 
+      FontSize="20" 
+      WidthRequest="330" 
+      HeightRequest="60" 
+      HorizontalTextAlignment="Center"
+     />
+        </Frame>
+
+        <Frame CornerRadius="35" WidthRequest="318" HeightRequest="72" Margin="0,10,0,20">
+            <Label 
+      Text="Prerequisite" 
+      FontSize="20" 
+      WidthRequest="330" 
+      HeightRequest="60" 
+      HorizontalTextAlignment="Center"
+      />
+        </Frame>
+
+
+        <Frame CornerRadius="35" WidthRequest="318" HeightRequest="72" Margin="0,10,0,20">
+            <Label 
+ 
+     Text="Discription"
+     HeightRequest="40"
+     HorizontalTextAlignment="Center" 
+     FontSize="18" 
+     HorizontalOptions="CenterAndExpand" />
+        </Frame>
+
+        <Frame CornerRadius="35" WidthRequest="318" HeightRequest="72" Margin="0,10,0,20">
+            <Label 
+      Text="Manager" 
+      FontSize="20" 
+      WidthRequest="330" 
+      HeightRequest="60" 
+      HorizontalTextAlignment="Center"
+      />
+        </Frame>
+
+        <Frame CornerRadius="35" WidthRequest="318" HeightRequest="72" Margin="0,10,0,20">
+            <Label 
+     Text="Priority"
+     FontSize="20"
+     WidthRequest="330"
+     HeightRequest="60"
+     HorizontalTextAlignment="Center"
+        />
+        </Frame>
+
+        <Button
+ Text="MORE"
+ BackgroundColor="#D9D9D9"
+ TextColor="#000000"
+ FontSize="25"
+ CornerRadius="10"
+ WidthRequest="120"
+ HeightRequest="50"
+ Margin="0, 30, 0, 20"
+ Clicked="Moretasck_Clicked"/>
+
+    </VerticalStackLayout>
+    </ScrollView>
+</toolkit:Popup>

@@ -2,57 +2,177 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp3.HomPage"
-             Title="HomPage">
+>
 
-    <StackLayout
-     Orientation="Vertical">
+    <Grid>
+        <!-- Main Content -->
+        <Grid x:Name="MainContent">
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnMainContentTapped" />
+            </Grid.GestureRecognizers>
+            <StackLayout>
+                <Button Clicked="Button_Clicked" 
+                        BackgroundColor="White"
+                        CornerRadius="35"
+                        WidthRequest="60"
+                        HeightRequest="50"
+                        FontSize="Body"
+                        Margin="0,0,400,0"
+                        Text="____"/>
 
-
-       
                 <Label
-            Text="Home"
-            TextColor="Black"
-            FontSize="48"
-            FontAttributes="Bold"
-            HorizontalOptions="Center"
-            Margin="0, 40, 0, 70"/>
-
-            
-        
+             Text="Home"
+             TextColor="Black"
+             FontSize="48"
+             FontAttributes="Bold"
+             HorizontalOptions="Center"
+             Margin="0, 20, 0, 70"/>
+                
+                
                 <Button
-            Text="People"
-            BackgroundColor="#D9D9D9"
-            TextColor="#000000"
-            FontSize="30"
-            
-            CornerRadius="171"
-            WidthRequest="330"
-            HeightRequest="90"
-            Margin="0, 30, 0, 20"
-            Clicked="peopleButton"/>
+             Text="People"
+             BackgroundColor="#D9D9D9"
+             TextColor="#000000"
+             FontSize="30"
+             
+             CornerRadius="171"
+             WidthRequest="330"
+             HeightRequest="90"
+             Margin="0, 30, 0, 20"
+             Clicked="peopleButton"/>
+                
+                
                 <Button
-            Text="Domain"
-            BackgroundColor="#D9D9D9"
-            TextColor="#000000"
-            FontSize="30"
-            
-            CornerRadius="170"
-            WidthRequest="330"
-            HeightRequest="90"
-            Margin="0, 30, 0, 20"
-            Clicked="domainButton"/>
+             Text="Domain"
+             BackgroundColor="#D9D9D9"
+             TextColor="#000000"
+             FontSize="30"
+             
+             CornerRadius="170"
+             WidthRequest="330"
+             HeightRequest="90"
+             Margin="0, 30, 0, 20"
+             Clicked="domainButton"/>
+                
+                
                 <Button
             Text="Task"
             BackgroundColor="#D9D9D9"
             TextColor="#000000"
             FontSize="30"
-           
             CornerRadius="171"
             WidthRequest="330"
             HeightRequest="90"
             Margin="0, 30, 0, 20"
             Clicked="taskButton"/>
-           
 
-    </StackLayout>
+            </StackLayout>
+        </Grid>
+
+        <!-- Flyout Menu (صفحه کشویی) -->
+
+        <Grid x:Name="FlyoutMenu" 
+             
+              BackgroundColor="white" WidthRequest="160"
+              HeightRequest="800"
+              Margin="-200,-100,10,0"
+              IsVisible="False"
+              TranslationX="-100">
+            
+            
+            <Grid
+                RowDefinitions="*, *"
+                ColumnDefinitions="*">
+
+                <StackLayout
+                 Grid.Row="0"
+                 Grid.Column="0" 
+                 HeightRequest="250"
+                 WidthRequest="150"
+                 BackgroundColor="#D9D9D9">
+
+                    <Frame
+                     VerticalOptions="CenterAndExpand"
+                     CornerRadius="100"
+                     WidthRequest="80"
+                     HeightRequest="80">
+                        <Image
+                         Source="Resources/Images/user.png" 
+                         WidthRequest="80" 
+                         HeightRequest="80"
+                      
+                        />
+                    </Frame>
+
+                    <Label Text="user name" 
+                     FontAttributes="Bold"
+                     FontSize="18" 
+                     HorizontalOptions="Center"
+                     VerticalOptions="StartAndExpand"/>
+                </StackLayout>
+
+
+                <StackLayout
+                 Grid.Row="1"
+                 Grid.Column="0"
+                 HeightRequest="600" 
+                 WidthRequest="150"
+                 BackgroundColor="White">
+
+                    <Button Text="my profile "
+                     BackgroundColor="#D9D9D9" 
+                     TextColor="#000000" 
+                     FontSize="10" 
+                     CornerRadius="30" 
+                     WidthRequest="100" 
+                     HeightRequest="30"
+                     Padding="0"
+                     Margin="0, 25, 0, 5" 
+                     ImageSource="Resources/Images/tasck.jpg"
+                     Clicked="GoToTasksPage"
+                    />
+
+
+                    <Button Text="my group" 
+                     BackgroundColor="#D9D9D9" 
+                     TextColor="#000000" 
+                     FontSize="10" 
+                     CornerRadius="30" 
+                     WidthRequest="100" 
+                     HeightRequest="30" 
+                     Padding="0"
+                     Margin="0, 5, 0, 5" 
+                     ImageSource="Resources/Images/grp.jpg"
+                     Clicked="GoToGroupsPage"
+                    />
+
+                    <Button Text="my tasck "
+                     BackgroundColor="#D9D9D9" 
+                     TextColor="#000000" 
+                     FontSize="10" 
+                     CornerRadius="30" 
+                     WidthRequest="100" 
+                     HeightRequest="30"
+                     Padding="0"
+                     Margin="0, 5, 0, 5" 
+                     ImageSource="Resources/Images/tasck.jpg"
+                     Clicked="GoToTasksPage"
+                    />
+
+                    <Button Text="masseges" 
+                     BackgroundColor="#D9D9D9" 
+                     TextColor="#000000" 
+                     FontSize="10" 
+                     CornerRadius="30" 
+                     WidthRequest="100" 
+                     HeightRequest="30"
+                     Padding="0"
+                     Margin="0, 5, 0, 5" 
+                     ImageSource="Resources/Images/maseg.jpg"
+                     Clicked="GoToMessagesPage"
+                    />
+                </StackLayout>
+            </Grid>
+        </Grid>
+    </Grid>
 </ContentPage>

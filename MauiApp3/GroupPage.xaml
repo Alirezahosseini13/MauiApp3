@@ -38,11 +38,20 @@
                     <CollectionView.ItemTemplate>
 
                         <DataTemplate>
+                            
+                            <SwipeView>
+                                
+                               <SwipeView.RightItems>
+                                  <SwipeItems>
+                                        <!--<SwipeItem Text="Edit" BackgroundColor="Blue" Invoked="OnEditItem"/>-->
+                                        <SwipeItem Text="Delete" BackgroundColor="#7C0A02" Invoked="OnDeleteItem"/>
+                                  </SwipeItems>
+                               </SwipeView.RightItems>
+                                
+                                <Frame
+                                 Margin="10">
 
-                            <Frame
-                               Margin="10">
-
-                                <StackLayout Orientation="Horizontal">
+                                  <StackLayout Orientation="Horizontal">
 
 
 
@@ -65,10 +74,10 @@
 
 
 
-                                </StackLayout>
+                                  </StackLayout>
 
-                            </Frame>
-
+                                </Frame>
+                            </SwipeView>
                         </DataTemplate>
 
                     </CollectionView.ItemTemplate>

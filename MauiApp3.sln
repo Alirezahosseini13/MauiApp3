@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35219.272
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiApp3", "MauiApp3\MauiApp3.csproj", "{5DA87F58-F5FA-4366-88E6-1B7DB35218B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiApp3", "MauiApp3\MauiApp3.csproj", "{5DA87F58-F5FA-4366-88E6-1B7DB35218B4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

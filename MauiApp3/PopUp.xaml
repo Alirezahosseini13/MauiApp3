@@ -3,21 +3,51 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              x:Class="MauiApp3.PopUp">
-    <VerticalStackLayout>
+    
+      <StackLayout>
         <Frame
-            BackgroundColor="Blue"
-            >
-            <StackLayout
-             Orientation="Vertical">
-                <Label
-                 Text="IM a POP UP"
-               />
-                <Button
-                Text="Click me"
-               />
-            </StackLayout>
-
-
+         Margin="10"
+         WidthRequest="250"
+            HeightRequest="70"
+          CornerRadius="20">
+            <Label
+           Text="All Tasks = 10"
+           FontSize="25"
+           FontAttributes="Bold"
+           HorizontalOptions="Center"
+           />
         </Frame>
-    </VerticalStackLayout>
+        
+ 
+        <Frame
+         Margin="10"
+         WidthRequest="250"
+                        HeightRequest="70"
+
+         CornerRadius="20">
+            <Label
+           Text="Tasks Completed = 5"
+           FontSize="20"
+           FontAttributes="Bold"
+           HorizontalOptions="Center"
+           />
+        </Frame>
+
+        <Frame
+ Margin="10"
+ WidthRequest="250"
+                HeightRequest="70"
+
+ CornerRadius="20">
+            <Label
+   Text="Tasks unCompleted = 5"
+   FontSize="19"
+   FontAttributes="Bold"
+   HorizontalOptions="Center"
+   />
+        </Frame>
+
+
+    </StackLayout>
+   
 </toolkit:Popup>

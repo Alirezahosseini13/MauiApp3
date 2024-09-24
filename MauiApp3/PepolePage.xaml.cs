@@ -1,5 +1,6 @@
-//using CommunityToolkit.Maui.Views;
+﻿//using CommunityToolkit.Maui.Views;
 using CommunityToolkit.Maui.Views;
+using System;
 using System.Collections.ObjectModel;
 //using static Java.Util.Jar.Attributes;
 
@@ -7,18 +8,18 @@ using System.Collections.ObjectModel;
 
    public partial class PepolePage : ContentPage
    {
-    public ObservableCollection<Users> users { get; set; }
+    public ObservableCollection<Users> useers { get; set; }
 
      
     public PepolePage()
     {
         InitializeComponent();
 
-        users = new ObservableCollection<Users>();
+        useers = new ObservableCollection<Users>();
 
         for(int i=0; i<20; i++)
         {
-            users.Add(new Users("Resources/Iimages/user1" , "shqayeq" , "more"));
+            useers.Add(new Users("Resources/Iimages/user1" , "shqayeq" , "more"));
         }
 
         BindingContext = this;
@@ -32,18 +33,37 @@ using System.Collections.ObjectModel;
 		await Navigation.PushAsync(new GroupPage());
 	}
 
+
+
     async private void Adduse_Clicked(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new AdduPage());
     }
+
+
 
     async private void Showprofile_Tapped(object sender, TappedEventArgs e)
     {
         await Navigation.PushAsync(new ShowprofilePage());
     }
 
+
+
     private void Showmore_Tapped(object sender, TappedEventArgs e)
     {
      this.ShowPopupAsync(new PopUp());
     }
-}
+
+
+
+    private void OnDeleteItem(object sender, EventArgs e)
+    {
+        
+        var swipeItem = (SwipeItem)sender;
+        
+        var users = (Users)swipeItem.BindingContext;
+
+        
+        useers.Remove(users);
+    }
+   }

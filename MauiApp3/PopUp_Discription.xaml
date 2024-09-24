@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+
+             x:Class="MauiApp3.PopUp_Discription"
+            >
+    <StackLayout
+        Orientation="Vertical"
+WidthRequest="400"
+HeightRequest="400"
+        >
+        <Frame
+            VerticalOptions="CenterAndExpand"
+            Margin="20,0,20,0">
+            <Editor  
+                x:Name="disTaskEntry" 
+                Placeholder="Discription"
+                VerticalOptions="CenterAndExpand"
+                HeightRequest="200"
+                FontSize="20"
+                />
+        </Frame>
+
+        <Button
+         Margin="0,0,0,30"
+         BackgroundColor="Black"
+         CornerRadius="15"
+         WidthRequest="100"
+         HeightRequest="40"
+         Text="Send"
+         TextColor="White"
+         FontSize="15"
+         FontAttributes="Bold"
+         Clicked="Send_Clicked"/>
+    </StackLayout>
+</toolkit:Popup>

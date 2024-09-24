@@ -21,6 +21,22 @@ public partial class AddgrpPage : ContentPage
 
     async private void Addgrup_Clicked(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new AddgrupPage());
+        if (!string.IsNullOrWhiteSpace(namegrpEntry.Text))
+        {
+            bool add = await DisplayAlert("confirmation", " are you sure to add it ? ", "OK", "NO");
+            if (add)
+            {
+                await DisplayAlert("SUCCESS", "ADDED SUCCESSFULLY", "OK");
+            }
+            else
+            {
+                return;
+            }
+
+        }
+        else
+        {
+            await DisplayAlert("error", "please fill in the fields ", "OK");
+        }
     }
 }

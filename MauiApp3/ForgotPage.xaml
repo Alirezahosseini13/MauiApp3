@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp3.ForgotPage"
+             Title="ForgotPage">
+    <VerticalStackLayout>
+        <Label 
+            Text="LOGIN TO THE ACCOUNT"
+            FontSize="30"
+            FontAttributes="Bold"
+             Margin="0,200,0,20"
+            HorizontalOptions="Center"/>
+
+        <Label
+         Text="Enter your National Code and Phone number"
+         FontSize="10"
+         HorizontalOptions="Center"
+                />
+
+        <Frame
+            Margin="0,30,0,20"
+         WidthRequest="250"
+            HeightRequest="50"
+            >
+            <Entry
+                HorizontalTextAlignment="Center"
+                Keyboard="Numeric"
+                FontSize="25"
+                HeightRequest="50"
+                MaxLength="10"
+                Placeholder="National Code"
+                x:Name ="NationalCodeEntry"
+                 />
+
+        </Frame>
+
+        <Frame
+            WidthRequest="250"
+                        HeightRequest="50"
+>
+            <Entry
+                HorizontalTextAlignment="Center"
+                Keyboard="Numeric"
+                FontSize="25"
+                     HeightRequest="50"
+                MaxLength="11"
+                 Placeholder="Phone number"
+                 x:Name ="PhonenumberEntry"
+         />
+
+        </Frame>
+
+        <Button
+            Margin="0,20,0,20"
+BackgroundColor="Black"
+CornerRadius="15"
+WidthRequest="100"
+HeightRequest="40"
+Text="Login"
+TextColor="White"
+FontSize="15"
+FontAttributes="Bold"
+Clicked="Logib_Clicked"/>
+
+        <Label 
+     Text="BacK"
+     FontAttributes="Bold"
+     HorizontalOptions="Center"
+   
+     >
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer  Tapped="BACK_Tapped"/>
+            </Label.GestureRecognizers>
+
+        </Label>
+
+    </VerticalStackLayout>
+</ContentPage>

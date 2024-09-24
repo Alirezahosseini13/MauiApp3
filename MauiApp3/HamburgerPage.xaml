@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<FlyoutPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MauiApp3"
+             x:Class="MauiApp3.HamburgerPage"
+             Title="HamburgerPage">
+
+    <FlyoutPage.Flyout>
+        <ContentPage Title="Menu">
+            <StackLayout Padding="10">
+                <Image Source="profile_picture.png" 
+                       WidthRequest="100" 
+                       HeightRequest="100"
+                       HorizontalOptions="Center" 
+                       Margin="0, 30, 0, 20"/>
+
+                <Label Text="اطلاعات پروفایل من" 
+                       FontAttributes="Bold"
+                       FontSize="24" 
+                       HorizontalOptions="Center"/>
+
+                <Button Text="گروه‌های من" 
+                        BackgroundColor="#D9D9D9" 
+                        TextColor="#000000" 
+                        FontSize="30" 
+                        CornerRadius="20" 
+                        WidthRequest="330" 
+                        HeightRequest="90" 
+                        Margin="0, 30, 0, 20" 
+                        Clicked="GoToGroupsPage"/>
+
+                <Button Text="تسک‌های من" 
+                        BackgroundColor="#D9D9D9" 
+                        TextColor="#000000" 
+                        FontSize="30" 
+                        CornerRadius="20" 
+                        WidthRequest="330" 
+                        HeightRequest="90" 
+                        Margin="0, 30, 0, 20" 
+                        Clicked="GoToTasksPage"/>
+
+                <Button Text="پیام‌های من" 
+                        BackgroundColor="#D9D9D9" 
+                        TextColor="#000000" 
+                        FontSize="30" 
+                        CornerRadius="20" 
+                        WidthRequest="330" 
+                        HeightRequest="90" 
+                        Margin="0, 30, 0, 20" 
+                        Clicked="GoToMessagesPage"/>
+            </StackLayout>
+        </ContentPage>
+    </FlyoutPage.Flyout>
+
+    <FlyoutPage.Detail>
+        <!-- Here we define a proper NavigationPage with a root ContentPage -->
+        <NavigationPage>
+            <x:Arguments>
+                <ContentPage Title="Main Content">
+                    <StackLayout>
+                        <Label Text="Welcome to the main page" 
+                               HorizontalOptions="Center" 
+                               VerticalOptions="CenterAndExpand"/>
+                    </StackLayout>
+                </ContentPage>
+            </x:Arguments>
+        </NavigationPage>
+    </FlyoutPage.Detail>
+
+</FlyoutPage>

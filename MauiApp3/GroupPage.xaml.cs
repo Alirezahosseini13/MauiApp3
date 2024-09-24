@@ -1,4 +1,4 @@
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 namespace MauiApp3;
 
 public partial class GroupPage : ContentPage
@@ -25,5 +25,15 @@ public partial class GroupPage : ContentPage
     async private void InformGroup_SelectionChanged(object sender, SelectionChangedEventArgs e)
     {
         await Navigation.PushAsync(new InformGroupPage());
+    }
+    private void OnDeleteItem(object sender, EventArgs e)
+    {
+        // دریافت SwipeItem که منبع داده را نگه‌داری می‌کند
+        var swipeItem = (SwipeItem)sender;
+        // دریافت چتی که باید حذف شود
+        var Groooups = (Groups)swipeItem.BindingContext;
+
+        // حذف چت از مجموعه
+        group.Remove(Groooups);
     }
 }

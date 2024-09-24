@@ -1,120 +1,99 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MauiApp3.PepolePage"
-             Background="#BEBDB8"
-             >
-    
-    <StackLayout
-        Orientation="Vertical">
+             x:Class="MauiApp3.PepolePage">
 
+    <StackLayout Orientation="Vertical">
+
+        <!-- دکمه گروه -->
         <Button
            Text="Group"
            BackgroundColor="#D9D9D9"
            TextColor="#000000"
-            FontSize="30"
-         
-         CornerRadius="171"
-         WidthRequest="330"
-         HeightRequest="90"
-         Margin="0, 30, 0, 20"
-         Clicked="Button_Clicked"
-            />
+           FontSize="30"
+           CornerRadius="171"
+           WidthRequest="330"
+           HeightRequest="90"
+           Margin="0, 30, 0, 20"
+           Clicked="Button_Clicked" />
 
-
-
-        <StackLayout
-          Orientation="Vertical">
+        <!-- لیست کاربران -->
+        <StackLayout Orientation="Vertical">
 
             <Frame
               Margin="20"
-                VerticalOptions="FillAndExpand"
-                HorizontalOptions="FillAndExpand"
-                BackgroundColor="Black"
-                CornerRadius="20"
-                WidthRequest="360"
-                HeightRequest="400"
-                >
+              VerticalOptions="FillAndExpand"
+              HorizontalOptions="FillAndExpand"
+              BackgroundColor="Black"
+              CornerRadius="20"
+              WidthRequest="360"
+              HeightRequest="400">
 
-
-                <CollectionView
-                  ItemsSource="{Binding users}">
-
+                <CollectionView ItemsSource="{Binding useers}">
                     <CollectionView.ItemTemplate>
-                    
                         <DataTemplate>
+                            <SwipeView>
+                                <SwipeView.RightItems>
+                                    <SwipeItems>
+                                        <!--<SwipeItem Text="Edit" BackgroundColor="Blue" Invoked="OnEditItem"/>-->
+                                        <SwipeItem Text="Delete" BackgroundColor="#7C0A02" Invoked="OnDeleteItem"/>
+                                    </SwipeItems>
+                                </SwipeView.RightItems>
 
-                            <Frame
-                        Margin="10">
-                            
-                                <StackLayout Orientation="Horizontal">
+                                <Frame Margin="10">
+                                    <StackLayout Orientation="Horizontal">
 
+                                        <!-- تصویر کاربر -->
+                                        <Image 
+                                           Source="{Binding ImageUrl}"
+                                           Aspect="Fill"
+                                           HeightRequest="60"
+                                           WidthRequest="60"
+                                           Margin="0,0,20,0">
+                                            <Image.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="Showprofile_Tapped"/>
+                                            </Image.GestureRecognizers>
+                                        </Image>
 
+                                        <!-- نام کاربر -->
+                                        <Label 
+                                          Text="{Binding Name}"
+                                          VerticalOptions="Center" />
 
-                                <Image 
-                                      Source="{Binding ImageUrl}"
-                                       Aspect="Fill"
-                                       HeightRequest="60"
-                                        WidthRequest="60"
-                                    Margin="0,0,20,0"
-                                    >
-                                    
-                                    <Image.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="Showprofile_Tapped"/>
-                                    </Image.GestureRecognizers>
-                                </Image>
+                                        <!-- اطلاعات بیشتر -->
+                                        <Label 
+                                            Text="{Binding More}"
+                                            FontAttributes="Bold"
+                                            HorizontalOptions="End"
+                                            Margin="80,40,0,0">
+                                            <Label.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="Showmore_Tapped"/>
+                                            </Label.GestureRecognizers>
+                                        </Label>
 
+                                    </StackLayout>
+                                </Frame>
 
-
-                                <Label 
-                                      Text="{Binding Name}"
-                                    VerticalOptions="Center"
-                                      />
-
-                                <Label 
-                                    Text="{Binding More}"
-                                    FontAttributes="Bold"
-                                    HorizontalOptions="End"
-                                    Margin="80,40,0,0"
-                                  
-                                    >
-                                    <Label.GestureRecognizers>
-                                        <TapGestureRecognizer  Tapped="Showmore_Tapped"/>
-                                    </Label.GestureRecognizers>
-
-                                </Label>
-
-
-                            </StackLayout>
-
-                            </Frame>
-                        
-                         </DataTemplate>
-                    
+                            </SwipeView>
+                        </DataTemplate>
                     </CollectionView.ItemTemplate>
-                
-             </CollectionView>
-                
+                </CollectionView>
+
             </Frame>
-            
         </StackLayout>
 
-
-
+        <!-- دکمه افزودن -->
         <Button
-            Text="Add"
-            BackgroundColor="#D9D9D9"
-              TextColor="#000000"
-           FontSize="30"
-            
-           CornerRadius="10"
-          WidthRequest="120"
-          HeightRequest="70"
-           Margin="0, 30, 0, 20"
-           Clicked="Adduse_Clicked"
-           
-        />
-        
+         Text="Add"
+         BackgroundColor="#D9D9D9"
+         TextColor="#000000"
+         FontSize="25"
+         CornerRadius="10"
+         WidthRequest="120"
+         HeightRequest="50"
+         Margin="0, 30, 0, 20"
+         Clicked="Adduse_Clicked" />
+
     </StackLayout>
 
 </ContentPage>

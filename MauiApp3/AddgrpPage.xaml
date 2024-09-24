@@ -12,6 +12,7 @@
            WidthRequest="318"
           HeightRequest="70">
             <Entry
+               x:Name="namegrpEntry" 
               Placeholder="User Group"
               HorizontalTextAlignment="Start"
               FontSize="17"

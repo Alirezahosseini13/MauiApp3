@@ -1,4 +1,5 @@
 using System.Collections.ObjectModel;
+using CommunityToolkit.Maui.Views;
 namespace MauiApp3;
 
 public partial class TaskPage : ContentPage
@@ -20,11 +21,13 @@ public partial class TaskPage : ContentPage
 
     async private void Addtsk_Clicked(object sender, EventArgs e)
     {
-
+     await Navigation.PushAsync(new TaskInformationPage());
     }
 
-    async private void ShowTskGroup_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    async private void ShowTaskInformation_SelectionChanged(object sender, SelectionChangedEventArgs e)
     {
+        // await Navigation.PushAsync(new ShowTaskInformationPage());
+        this.ShowPopupAsync(new PopUP_ShowTaskInformation());
 
     }
 }

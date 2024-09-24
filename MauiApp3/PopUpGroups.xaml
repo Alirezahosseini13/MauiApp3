@@ -3,21 +3,59 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              x:Class="MauiApp3.PopUpGroups">
-    <VerticalStackLayout>
-        <Frame
-     BackgroundColor="DarkGreen"
-     >
-            <StackLayout
-      Orientation="Vertical">
-                <Label
-          Text="IM a POP UP"
-        />
-                <Button
-         Text="Click me"
-        />
-            </StackLayout>
+    <StackLayout
+     Orientation="Vertical">
+        <StackLayout
+         Orientation="Vertical">
+            <Frame
+             Margin="20"
+             VerticalOptions="FillAndExpand"
+             HorizontalOptions="FillAndExpand"
+             BackgroundColor="Black"
+             CornerRadius="20"
+             WidthRequest="360"
+             HeightRequest="450" >
+                <CollectionView
+                 SelectionMode="Multiple"
+                 ItemsSource="{Binding group}">
 
+                    <CollectionView.ItemTemplate>
 
-        </Frame>
-    </VerticalStackLayout>
+                        <DataTemplate>
+
+                            <Frame
+                             Margin="10">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label 
+                                     Text="{Binding Name}"
+                                     HorizontalOptions="FillAndExpand"
+                                     Margin="20,0,0,0"
+                                     FontAttributes="Bold"
+                                     FontSize="20"/>
+
+                                </StackLayout>
+
+                            </Frame>
+
+                        </DataTemplate>
+
+                    </CollectionView.ItemTemplate>
+
+                </CollectionView>
+
+            </Frame>
+
+        </StackLayout>
+          <Button
+           Text="Add"
+           BackgroundColor="Black"
+           TextColor="White"
+           FontSize="25"
+           CornerRadius="10"
+           WidthRequest="120"
+           HeightRequest="50"
+           Margin="0, 0, 0, 20"
+           Clicked="Addgrp_Clicked"
+          />
+    </StackLayout>
 </toolkit:Popup>
